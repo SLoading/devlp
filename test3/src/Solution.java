@@ -44,9 +44,9 @@ public class Main {
 
     }
         static void func1(int[] arr) {
-        double pol=0;
-        double nul=0;
-        double otr=0;
+        float pol=0;
+        float nul=0;
+        float otr=0;
         for (int i:arr){
             if (i>0)
                 pol= pol + 1;
@@ -56,9 +56,11 @@ public class Main {
                     otr = otr + 1;
             }
         System.out.println("Output:");
-        System.out.println("Положительных= " + pol / arr.length);
-        System.out.println("Отрицательных= " + otr / arr.length);
-        System.out.println("Нулевых= " + nul / arr.length);
+        System.out.printf("%.6f", pol / arr.length);
+        System.out.println();
+        System.out.printf("%.6f", otr / arr.length);
+        System.out.println();
+        System.out.printf("%.6f", nul / arr.length);
 
         }
     }
