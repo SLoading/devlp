@@ -20,7 +20,7 @@ public class Main {
             arr[i] = arrItem;
         }
 
-        func1(arr,n);
+        func1(arr);
 
         scanner.close();
     }
@@ -43,23 +43,24 @@ public class Main {
          */
 
     }
-        static void func1(int[] arr,int n) {
+        static void func1(int[] arr) {
         double pol=0;
         double nul=0;
         double otr=0;
-        for (int i=0 ; i < n;i++){
-            if (arr[i]>0)
+        for (int i:arr){
+            if (i>0)
                 pol= pol + 1;
-            else if (arr[i] == 0)
+            else if (i == 0)
                 nul = nul + 1;
-                else if (arr[i]<0)
+                else if (i<0)
                     otr = otr + 1;
             }
         System.out.println("Output:");
-        System.out.println("Положительных= " + pol / n);
-        System.out.println("Отрицательных= " + otr / n);
-        System.out.println("Нулевых= " + nul / n);
+        System.out.println("Положительных= " + pol / arr.length);
+        System.out.println("Отрицательных= " + otr / arr.length);
+        System.out.println("Нулевых= " + nul / arr.length);
 
         }
     }
+
 
